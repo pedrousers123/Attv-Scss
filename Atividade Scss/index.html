@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Festival da Cidade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Festival da Cidade</h1>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#programacao">Programação</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="sobre" class="sobre">
+
+            <h2>Festival da Cidade</h2>
+
+            <p>
+                Venha participar do maior festival da cidade!
+                Teremos música, diversão e muita animação.
+            </p>
+
+            <p>
+                📅 Data: 20 de Dezembro de 2026
+            </p>
+
+            <div id="contador">
+                Carregando contagem regressiva...
+            </div>
+
+        </section>
+
+
+        <section id="programacao" class="programacao">
+
+            <h2>Programação</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>18:00</h3>
+                    <p>Abertura do evento</p>
+                </div>
+
+                <div class="card">
+                    <h3>20:00</h3>
+                    <p>Show ao vivo</p>
+                </div>
+
+                <div class="card">
+                    <h3>22:00</h3>
+                    <p>DJ e música</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="contato" class="contato">
+
+            <h2>Entre em contato</h2>
+
+            <p>
+                Quer saber mais sobre o evento?
+            </p>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/" target="_blank">
+                WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Festival da Cidade</p>
+    </footer>
+
+
+    <script>
+
+        let dataEvento = new Date("December 20, 2026 18:00:00").getTime();
+
+        let contador = setInterval(function () {
+
+            let agora = new Date().getTime();
+
+            let tempo = dataEvento - agora;
+
+            let dias = Math.floor(tempo / (1000 * 60 * 60 * 24));
+
+            let horas = Math.floor(
+                (tempo % (1000 * 60 * 60 * 24)) /
+                (1000 * 60 * 60)
+            );
+
+            let minutos = Math.floor(
+                (tempo % (1000 * 60 * 60)) /
+                (1000 * 60)
+            );
+
+            let segundos = Math.floor(
+                (tempo % (1000 * 60)) /
+                1000
+            );
+
+            document.getElementById("contador").innerHTML =
+                dias + " dias " +
+                horas + " horas " +
+                minutos + " minutos " +
+                segundos + " segundos";
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
