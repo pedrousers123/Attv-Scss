@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Festival da Cidade</title>
+    <title>Hungria em Nova Friburgo</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,13 +13,15 @@
 <body>
 
     <header>
-        <h1>Festival da Cidade</h1>
+
+        <h1>Hungria em Nova Friburgo</h1>
 
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#programacao">Programação</a>
             <a href="#contato">Contato</a>
         </nav>
+
     </header>
 
 
@@ -27,15 +29,23 @@
 
         <section id="sobre" class="sobre">
 
-            <h2>Festival da Cidade</h2>
+            <h2>Hungria em Nova Friburgo</h2>
 
             <p>
-                Venha participar do maior festival da cidade!
-                Teremos música, diversão e muita animação.
+                Prepare-se para viver uma noite inesquecível
+                com muita música e diversão!
             </p>
 
             <p>
-                📅 Data: 20 de Dezembro de 2026
+                🎤 Show do Hungria Hip Hop
+            </p>
+
+            <p>
+                📍 Nova Friburgo - RJ
+            </p>
+
+            <p>
+                📅 Data: 8 de Agosto de 2027
             </p>
 
             <div id="contador">
@@ -53,17 +63,17 @@
 
                 <div class="card">
                     <h3>18:00</h3>
-                    <p>Abertura do evento</p>
+                    <p>Abertura dos portões</p>
                 </div>
 
                 <div class="card">
                     <h3>20:00</h3>
-                    <p>Show ao vivo</p>
+                    <p>DJ convidado</p>
                 </div>
 
                 <div class="card">
                     <h3>22:00</h3>
-                    <p>DJ e música</p>
+                    <p>Show do Hungria</p>
                 </div>
 
             </div>
@@ -79,7 +89,7 @@
                 Quer saber mais sobre o evento?
             </p>
 
-            <a href="https://www.instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/hungria_oficial/" target="_blank">
                 Instagram
             </a>
 
@@ -93,13 +103,17 @@
 
 
     <footer>
-        <p>© 2026 Festival da Cidade</p>
+
+        <p>
+            © 2027 Hungria em Nova Friburgo
+        </p>
+
     </footer>
 
 
     <script>
 
-        let dataEvento = new Date("December 20, 2026 18:00:00").getTime();
+        let dataEvento = new Date("August 8, 2026 22:00:00").getTime();
 
         let contador = setInterval(function () {
 
@@ -107,7 +121,9 @@
 
             let tempo = dataEvento - agora;
 
-            let dias = Math.floor(tempo / (1000 * 60 * 60 * 24));
+            let dias = Math.floor(
+                tempo / (1000 * 60 * 60 * 24)
+            );
 
             let horas = Math.floor(
                 (tempo % (1000 * 60 * 60 * 24)) /
@@ -124,11 +140,22 @@
                 1000
             );
 
+
             document.getElementById("contador").innerHTML =
                 dias + " dias " +
                 horas + " horas " +
                 minutos + " minutos " +
                 segundos + " segundos";
+
+
+            if (tempo < 0) {
+
+                clearInterval(contador);
+
+                document.getElementById("contador").innerHTML =
+                    "O show já começou! 🎤";
+
+            }
 
         }, 1000);
 
