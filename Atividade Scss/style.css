@@ -1,4 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #410c5f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+header nav {
+  margin-top: 15px;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+}
+header nav a:hover {
+  opacity: 0.7;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobre {
+  background-color: white;
+}
+.sobre h2 {
+  color: #410c5f;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.sobre p {
+  margin: 10px;
+  font-size: 18px;
+}
+
+#contador {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #410c5f;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(108, 43, 217, 0.3);
+}
+
+.programacao {
+  background-color: #f5f5f5;
+}
+.programacao h2 {
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card h3 {
+  color: #410c5f;
+  margin-bottom: 10px;
+}
+
+.contato {
+  background-color: white;
+}
+.contato h2 {
+  margin-bottom: 15px;
+}
+.contato a {
+  display: inline-block;
+  background-color: #410c5f;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(108, 43, 217, 0.25);
+  transition: 0.3s;
+}
+.contato a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(108, 43, 217, 0.35);
+}
+
+footer {
+  background-color: #410c5f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+  section {
+    padding: 40px 15px;
+  }
+  #contador {
+    font-size: 18px;
+  }
+  .card {
+    width: 100%;
+  }
+  .banner img {
+    height: 250px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
- 

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Hungria em Nova Friburgo</title>
 
     <link rel="stylesheet" href="style.css">
@@ -14,7 +13,7 @@
 
     <header>
 
-        <h1>Hungria em Nova Friburgo</h1>
+        <h1>Hungria</h1>
 
         <nav>
             <a href="#sobre">Sobre</a>
@@ -24,6 +23,7 @@
 
     </header>
 
+    </section>
 
     <main>
 
@@ -31,29 +31,17 @@
 
             <h2>Hungria em Nova Friburgo</h2>
 
-            <p>
-                Prepare-se para viver uma noite inesquecível
-                com muita música e diversão!
-            </p>
+            <p>🎤 Show do Hungria Hip Hop</p>
 
-            <p>
-                🎤 Show do Hungria Hip Hop
-            </p>
+            <p>📍 Nova Friburgo - RJ</p>
 
-            <p>
-                📍 Nova Friburgo - RJ
-            </p>
-
-            <p>
-                📅 Data: 8 de Agosto de 2027
-            </p>
+            <p>📅 08 de Agosto de 2026</p>
 
             <div id="contador">
-                Carregando contagem regressiva...
+                Carregando...
             </div>
 
         </section>
-
 
         <section id="programacao" class="programacao">
 
@@ -63,12 +51,12 @@
 
                 <div class="card">
                     <h3>18:00</h3>
-                    <p>Abertura dos portões</p>
+                    <p>Abertura dos Portões</p>
                 </div>
 
                 <div class="card">
                     <h3>20:00</h3>
-                    <p>DJ convidado</p>
+                    <p>DJ Convidado</p>
                 </div>
 
                 <div class="card">
@@ -80,14 +68,11 @@
 
         </section>
 
-
         <section id="contato" class="contato">
 
-            <h2>Entre em contato</h2>
+            <h2>Contato</h2>
 
-            <p>
-                Quer saber mais sobre o evento?
-            </p>
+            <p>Fale conosco.</p>
 
             <a href="https://www.instagram.com/hungria_oficial/" target="_blank">
                 Instagram
@@ -101,65 +86,13 @@
 
     </main>
 
-
     <footer>
 
-        <p>
-            © 2027 Hungria em Nova Friburgo
-        </p>
+        <p>© 2026 Hungria em Nova Friburgo</p>
 
     </footer>
 
-
-    <script>
-
-        let dataEvento = new Date("August 8, 2026 22:00:00").getTime();
-
-        let contador = setInterval(function () {
-
-            let agora = new Date().getTime();
-
-            let tempo = dataEvento - agora;
-
-            let dias = Math.floor(
-                tempo / (1000 * 60 * 60 * 24)
-            );
-
-            let horas = Math.floor(
-                (tempo % (1000 * 60 * 60 * 24)) /
-                (1000 * 60 * 60)
-            );
-
-            let minutos = Math.floor(
-                (tempo % (1000 * 60 * 60)) /
-                (1000 * 60)
-            );
-
-            let segundos = Math.floor(
-                (tempo % (1000 * 60)) /
-                1000
-            );
-
-
-            document.getElementById("contador").innerHTML =
-                dias + " dias " +
-                horas + " horas " +
-                minutos + " minutos " +
-                segundos + " segundos";
-
-
-            if (tempo < 0) {
-
-                clearInterval(contador);
-
-                document.getElementById("contador").innerHTML =
-                    "O show já começou! 🎤";
-
-            }
-
-        }, 1000);
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
